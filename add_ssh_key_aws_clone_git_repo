@@ -86,3 +86,4 @@ Step 4: Clone the repository
 ##############################
 Clone your repository to your local computer and start working on code. Run the following command:
 
+git clone <https repo>
