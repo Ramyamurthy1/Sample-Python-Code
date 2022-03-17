@@ -13,11 +13,14 @@ from time import sleep
 
 print(f'{datetime.now()}  : "Executing Invoking Test Automation from the pod')
 
+#################################################################
+#This Will Load the kube config from ~/$HOME/.kube/config  ######
+#################################################################
 
 config.load_kube_config()
 namespace = "ubuntu"
 
-config.load_kube_config()
+#config.load_kube_config()
   
 try:
             c = Configuration().get_default_copy()
