@@ -45,6 +45,11 @@ TestDataSheet=sys.argv[1]
 print(f'{datetime.now()}  : "The Test sheet to be executed is {TestDataSheet}')
 
 
+##########################################################################
+# Commands to execute from within the pod.
+###########################################################################
+
+
 #exec_cd_command = ["/bin/sh","-c", "cd /cicd/TestAutomation/Code/all_rfss/"]
 #resp_cd = stream(core_v1.connect_get_namespaced_pod_exec, pod_name, namespace, command=exec_command, stderr=True, stdin=False, stdout=True, tty=False)
 
