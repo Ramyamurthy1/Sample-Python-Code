@@ -1,0 +1,23 @@
+##########################################################
+# This python code will convert HH:SS:MS to seconds:ms
+# 0:00:10.272950 to 10:27
+##########################################################
+
+
+ try:
+      df = pandas.read_csv(results_filename)
+      data_json = df.to_json(orient='records')
+      header= pandas.read_csv(results_filename).columns
+      keys=header.tolist()
+      thisisjson_dict=json.loads(data_json)
+    except Exception as e:
+      print(f'{datetime.now()}: Not able to read Test Results file')
+      logger.debug(f'{datetime.now()}: Not able to read Test Results file')
+      logger.info(f'{datetime.now()}: Not able to read Test Results file')
+
+for j in thisisjson_dict:
+      TestCaseID=j["TestCase-ID"]
+      TimeTaken=j["Timetaken"]
+
+      h, m, s = TimeTaken.split(':')
+      NwTimeTaken=float(h) * 3600 + float(m) * 60 + float(s) #This will convert the time
