@@ -1,0 +1,34 @@
+######################################################################
+## UPDATE A CSV FILE WITH NEW COLUMN AND VALUES TO THE NEW COLUMN ####
+######################################################################
+##
+##  UPDATED 
+
+
+
+If the test case id matches, the new column 'network_time' will be added and the value for the same will be updated with "total_execution_time"
+================================================================================================================================================
+
+df.loc[df['TestCase-ID'] == j["TestCase-ID"], 'Network_Time'] = total_execution_time
+df.loc[df['TestCase-ID'] == j["TestCase-ID"], 'Timetaken'] = alm_time
+
+
+BEFORE:
+=======
+
+
+0         1  PROVIDE  POSITIVE                1  cicd-08-23-2022-08:45:20:632177  ...      Provide  PASSED  {'id': 'cicd-08-23-2022-08:45:20:632177', 'sta...  6.376731        
+1         2    CEASE  POSITIVE                1  cicd-08-23-2022-08:45:32:263247  ...        Cease  PASSED  {'id': 'cicd-08-23-2022-08:45:32:263247', 'sta...   9.48495        
+
+
+
+
+TIME TAKEN AND NETWORK TIME ARE THE NEW UPDATED ONES
+
+AFTER:
+=======
+
+sequence category  scenario  test_case_count                      TestCase-ID  ... OrderSubType  Result                                             Reason Timetaken Network_Time
+
+0         1  PROVIDE  POSITIVE                1  cicd-08-23-2022-08:45:20:632177  ...      Provide  PASSED  {'id': 'cicd-08-23-2022-08:45:20:632177', 'sta...  6.376731        5.248
+1         2    CEASE  POSITIVE                1  cicd-08-23-2022-08:45:32:263247  ...        Cease  PASSED  {'id': 'cicd-08-23-2022-08:45:32:263247', 'sta...   9.48495        0.788
