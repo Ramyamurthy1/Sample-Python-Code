@@ -1,3 +1,11 @@
+#############################################################
+#
+#   Script to pass entire json file to an REST Endpoint
+#
+#
+#############################################################
+
+
 import json
 from get_token import get_token
 import requests
