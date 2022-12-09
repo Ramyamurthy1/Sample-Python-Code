@@ -16,8 +16,8 @@ You must have an SSH public-private key pair. Open the Bash emulator and create 
 Step1
 ########
 
-1. Download git using yum install git
-1-A. Generate SSH Keys using command "ssh-keygen"
+#1. Download git using yum install git
+#1-A. Generate SSH Keys using command "ssh-keygen"
 
 
     	[root@ip-172-31-11-25 ec2-user]# ssh-keygen
@@ -78,6 +78,7 @@ Host git-codecommit.*.amazonaws.com
 User Your-IAM-SSH-Key-ID-Here
 IdentityFile ~/.ssh/Your-Private-Key-File-Name-Here
 Once you have saved the file, make sure it has the right permissions by running the following command in the ~/.ssh directory.
+
 chmod 600 config
 
 
