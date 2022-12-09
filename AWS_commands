@@ -33,12 +33,12 @@ Example:
         {
             "repositoryMetadata": {
                 "repositoryName": "Hotspot",
-                "cloneUrlSsh": "ssh://git-codecommit.us-east-2.amazonaws.com/v1/repos/Hotspot",
+                "cloneUrlSsh": "ssh://git-codecommit.region.amazonaws.com/v1/repos/Hotspot",
                 "lastModifiedDate": 1623756571.032,
                 "repositoryId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx",
-                "cloneUrlHttp": "https://git-codecommit.us-east-2.amazonaws.com/v1/repos/Hotspot",
+                "cloneUrlHttp": "https://git-codecommit.region.amazonaws.com/v1/repos/Hotspot",
                 "creationDate": 1623756571.032,
-                "Arn": "arn:aws:codecommit:us-east-2:147415857303:Hotspot",
+                "Arn": "arn:aws:codecommit:region:xxxxxxxxxxxx:Hotspot",
                 "accountId": "xxxxxxxxxxxx"
             }
         }
@@ -63,7 +63,7 @@ Example:
         {
             "branch": {
                 "branchName": "main",
-                "commitId": "3fed4d0d6d5ce823aa77c3b173c030a3472dd7e6"
+                "commitId": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
             }
         }
         [ec2-user@ip-172-31-30-164 aws]$
@@ -81,9 +81,9 @@ Example:
 
         [root@ip-172-31-27-223 ec2-user]#  aws codecommit delete-file --repository-name Voicemail-Provide --branch-name main --file-path VoiceMail-Cease-v3-1.json --parent-commit-id 3fed4d0d6d5ce823aa77c3b173c030a3472dd7e6
         {
-            "commitId": "d47d83c0cf90c31d5a5be8a23227d7bcde1366f0",
-            "blobId": "6d7d273c7f69cd10b0deb037c33e015454658440",
-            "treeId": "6d6d4ba72d3b6c4b8a034c30671c87e403eb99fd",
+            "commitId": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+            "blobId": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+            "treeId": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
             "filePath": "TMF641-Order-fo- VoiceMail-Cease-v3-1.json"
         }
         [root@ip-172-31-27-223 ec2-user]#
@@ -92,4 +92,4 @@ Example:
         
   Note: If the file name has spaces 
   
-  aws codecommit delete-file --repository-name Voicemail-Provide --branch-name main --file-path TMF641-Order-fo-\ VoiceMail-Cease-v3-1.json --parent-commit-id 3fed4d0d6d5ce823aa77c3b173c030a3472dd7e6
+  aws codecommit delete-file --repository-name Voicemail-Provide --branch-name main --file-path TMF641-Order-fo-\ VoiceMail-Cease-v3-1.json --parent-commit-id xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
