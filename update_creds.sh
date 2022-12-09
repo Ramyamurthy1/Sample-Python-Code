@@ -18,3 +18,8 @@ cat ca.crt
 
 kafka_password=`kubectl get secret cp4na-o-kafka-user -n $NAMESPACE -o jsonpath='{ .data.sasl\.jaas\.config }' | base64 -d|grep password|awk '{print $NF}'|sed -e 's/password=//g'|tr -d '"'|sed "s/;/',/"`
 echo "echo kafka password is " $kafka_password
+
+####################################################################
+#   Sed command will update "passwd" value with $kafka_password
+
+sed -i -r "s#^(passwd=').*#\1${kafka_password//#/\\#}#" token_urls.py
