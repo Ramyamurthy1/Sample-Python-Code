@@ -13,10 +13,10 @@ EKS_CLUSTER="test"
 
 echo "Inside update script"
 
-kubectl get secret ib-orc-230-strimzi-001 -o "jsonpath={.data['ca\.crt']}" -n $EKS_NAMESPACE | base64 -d > ca.crt
+kubectl get secret <<secret_name>> -o "jsonpath={.data['ca\.crt']}" -n $EKS_NAMESPACE | base64 -d > ca.crt
 cat ca.crt
 
-kafka_password=`kubectl get secret cp4na-o-kafka-user -n $NAMESPACE -o jsonpath='{ .data.sasl\.jaas\.config }' | base64 -d|grep password|awk '{print $NF}'|sed -e 's/password=//g'|tr -d '"'|sed "s/;/',/"`
+kafka_password=`kubectl get secret <<username>> -n $NAMESPACE -o jsonpath='{ .data.sasl\.jaas\.config }' | base64 -d|grep password|awk '{print $NF}'|sed -e 's/password=//g'|tr -d '"'|sed "s/;/',/"`
 echo "echo kafka password is " $kafka_password
 
 ####################################################################
