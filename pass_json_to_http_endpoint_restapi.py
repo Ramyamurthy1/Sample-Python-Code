@@ -14,9 +14,9 @@ from datetime import datetime
 
 
 
-NSD_ENDPOINT_URL='https://internal-k8s-use2az1n-iborc230-8e04d0ac9e-1749079295.us-east-2.elb.amazonaws.com/api/plugins/fiveg/nsds/'
-NST_ENDPOINT_URL='https://internal-k8s-use2az1n-iborc230-8e04d0ac9e-1749079295.us-east-2.elb.amazonaws.com/api/plugins/fiveg/nsts/'
-CNSST_ENDPOINT_URL='https://internal-k8s-use2az1n-iborc230-8e04d0ac9e-1749079295.us-east-2.elb.amazonaws.com/api/plugins/fiveg/cn-nssts/'
+NSD_ENDPOINT_URL='https://sampleurl.com:80/xxx/yyy'
+NST_ENDPOINT_URL='https://sampleurl.com:80/xxx/yyy'
+CNSST_ENDPOINT_URL='https://sampleurl.com:80/xxx/yyy'
 
 def deploy_slice_template(query_json, SP_ENDPOINT):
   print("inside slice template")
