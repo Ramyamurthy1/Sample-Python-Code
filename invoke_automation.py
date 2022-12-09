@@ -1,3 +1,15 @@
+################################################################################
+#
+#The sample code will will invoke python scripts from the kubernetes pod.
+#
+# 1. Log into the pod 
+# 2. change to correct naespace
+# 3. change directory in the pod
+# 4. invoke python script
+#
+#################################################################################
+
+
 from kubernetes import config
 from kubernetes.client import Configuration
 from kubernetes.client.api import core_v1_api
