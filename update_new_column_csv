@@ -1,16 +1,16 @@
-######################################################################
-## UPDATE A CSV FILE WITH NEW COLUMN AND VALUES TO THE NEW COLUMN ####
-######################################################################
+#################################################################################
+## Script to UPDATE A Existing CSV FILE WITH NEW COLUMN AND VALUES TO THE NEW COLUMN ####
+#################################################################################
 ##
 ##  UPDATED 
 
+Example:
 
-
-If the test case id matches, the new column 'network_time' will be added and the value for the same will be updated with "total_execution_time"
-================================================================================================================================================
+##  If the test case id matches, the new column 'network_time' will be added and the value for the same will be updated with "total_execution_time"
+## ================================================================================================================================================
 
 df.loc[df['TestCase-ID'] == j["TestCase-ID"], 'Network_Time'] = total_execution_time
-df.loc[df['TestCase-ID'] == j["TestCase-ID"], 'Timetaken'] = alm_time
+df.loc[df['TestCase-ID'] == j["TestCase-ID"], 'Timetaken'] = new_time
 
 
 BEFORE:
@@ -23,7 +23,8 @@ BEFORE:
 
 
 
-TIME TAKEN AND NETWORK TIME ARE THE NEW UPDATED ONES
+#  TIME TAKEN AND NETWORK TIME ARE THE NEW UPDATED ONES
+########################################################
 
 AFTER:
 =======
