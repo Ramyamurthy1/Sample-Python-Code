@@ -1,17 +1,23 @@
-I. Delete a file from AWS GIT repository
-########################################
+The below code Deletes a file from AWS GIT repository oe delete file from the repository
+##########################################################################################
 
 
 Step1: Get the repo Commit ID
 ##############################
 
- aws codecommit delete-repository --repository-name <repository name>
+#AWS COMMAND
+############
+
+aws codecommit delete-repository --repository-name <repository name>
 
 Example:
 
         [ec2-user@ip-172-31-11-25 HotSpot]$ aws codecommit delete-repository --repository-name Hotspot
-        {
-            "repositoryId": "1e33397c-e5c4-4479-8970-e85500438c90"
+	
+Sample Output:
+
+	{
+            "repositoryId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx"
         }
         
         
@@ -29,11 +35,11 @@ Example:
                 "repositoryName": "Hotspot",
                 "cloneUrlSsh": "ssh://git-codecommit.us-east-2.amazonaws.com/v1/repos/Hotspot",
                 "lastModifiedDate": 1623756571.032,
-                "repositoryId": "bf080d8a-39cc-40f4-b65b-21a89d07a501",
+                "repositoryId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx",
                 "cloneUrlHttp": "https://git-codecommit.us-east-2.amazonaws.com/v1/repos/Hotspot",
                 "creationDate": 1623756571.032,
                 "Arn": "arn:aws:codecommit:us-east-2:147415857303:Hotspot",
-                "accountId": "147415857303"
+                "accountId": "xxxxxxxxxxxx"
             }
         }
 
