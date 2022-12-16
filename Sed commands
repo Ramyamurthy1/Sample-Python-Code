@@ -1,0 +1,10 @@
+Below are few sed commands to keep handu :-)
+
+
+Objective - get all the lines in a file start with two different strings
+=========================================================================
+
+Ex: in a file called values.yaml, extact all the lines starting with "image" or "imageName"
+
+
+sed -n '/image: \|imageName:/p' values.yaml
