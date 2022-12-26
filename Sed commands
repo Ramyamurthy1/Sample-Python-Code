@@ -8,3 +8,13 @@ Ex: in a file called values.yaml, extact all the lines starting with "image" or 
 
 
 sed -n '/image: \|imageName:/p' values.yaml
+
+
+
+Objective - print rest of the line after a particular word
+============================================================
+Ex: 
+INPUT: arn:aws:elasticloadbalancing:us-west-1:147415857303:loadbalancer/app/k8s-usw1az1n-iborc230-2cf5c01297/e68d5cfe12121db7
+OUTPUT: /k8s-usw1az1n-iborc230-2cf5c01297/e68d5cfe12121db7
+
+sed 's/.*app//'
