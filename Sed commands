@@ -18,3 +18,17 @@ INPUT: arn:aws:elasticloadbalancing:us-west-1:147415857303:loadbalancer/app/k8s-
 OUTPUT: /k8s-usw1az1n-iborc230-2cf5c01297/e68d5cfe12121db7
 
 sed 's/.*app//'
+
+
+
+
+Objective: Replace rest of the line after matching a string
+=========================================================
+
+Ex:   noHostIngressDomain: "us-east-2.elb.amazonaws.com" must be replaced with 
+  noHostIngressDomain: "ramya"
+  
+  
+sed -nE '/ noHostIngressDomain:/{s/:.+/: "ramya"/;p;}' input.text
+
+ 
