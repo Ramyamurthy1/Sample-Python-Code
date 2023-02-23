@@ -1,5 +1,6 @@
 
 What is a Yaml file?
+===================
 
 YAML is a Data serialization language which is often used to write configuration files. 
  
@@ -9,6 +10,7 @@ YAML uses Python-style indentation to indicate nesting. Tab characters are not a
 YAML files use a .yml or .yaml extension. 
 
 PyYaml or ruamel
+================
 
 If want to parse or edit a yaml file in python, we can use PyYaml python library.  Ruamel is the derivative of PyYaml 3.11 and is a bit more advanced ofcourse!
 
@@ -65,17 +67,10 @@ print(df["global"]["service1"]["port"])
 
 **Update the value of a key**
 
-Update the values 
-
-
-
-
-
-
+Update the values in the yaml file
+==================================
 
 df["global"]["service1"]["name"]="test"
-
-
 df["global"]["service1"]["port"]="1234"
 
 and save the file:
@@ -83,12 +78,8 @@ and save the file:
 with open(filename, 'w') as fp:
       yaml.dump(df,fp)
 
-
-
-Full Code
-
-
-
+Full Code:
+===========
 
 yaml = ruamel.yaml.YAML()
 yaml.allow_duplicate_keys=True
@@ -106,16 +97,8 @@ except Exception as e:
 
 #updates labels
 try:
-    df["global"]["nodename"]["name"]=nodeName
-    df["global"]["labels"]["environment"]=labelEnvironment
-    df["global"]["labels"]["Group"]=labelGroup
-    
-    df["global"]["noHostIngressDomain"]=noHostIngressDomain
-    df["global"]["ingressAnnotations"]["kubernetes.io/ingress.class"]=IngressAnnoatationClass
-    df["global"]["ingressAnnotations"]["alb.ingress.kubernetes.io/scheme"]=IngressAnnoatationScheme
+    df["global"]["service1"]["name"]=nodeName
  
-    df["global"]["ingressAnnotations"].update(newSubnetDataDict)
-    df["global"]["ingressAnnotations"].update(newSecurityGroupDict)
 except Exception as e:
     print("Cannot update the values", e)
 
